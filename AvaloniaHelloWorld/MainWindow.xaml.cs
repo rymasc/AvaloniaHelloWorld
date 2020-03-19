@@ -1,5 +1,6 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using AvaloniaHelloWorld.Models;
 
@@ -15,6 +16,12 @@ namespace AvaloniaHelloWorld{
 
         private void InitializeComponent(){
             AvaloniaXamlLoader.Load(this);
+        }
+
+        public void OnButtonClicked(object sender, RoutedEventArgs args) {
+            HelloViewModel context = this.DataContext as HelloViewModel;
+            context.Greeting = $"Hello {context.Name}";
+
         }
     }
 }
