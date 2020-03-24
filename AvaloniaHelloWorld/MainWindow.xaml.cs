@@ -9,6 +9,8 @@ namespace AvaloniaHelloWorld{
         public MainWindow(){
             InitializeComponent();
             this.DataContext = new HelloViewModel() { Greeting = "Enter a Name and click the button" };
+            HelloViewModel context = this.DataContext as HelloViewModel;
+            context.OS = "getOS";
 #if DEBUG
             this.AttachDevTools();
 #endif

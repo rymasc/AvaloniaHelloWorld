@@ -9,6 +9,7 @@ namespace AvaloniaHelloWorld.Models{
 
         private string _greeting;
         private string _name;
+        private string _os;
 
         public string Greeting {
             get => _greeting;
@@ -27,6 +28,14 @@ namespace AvaloniaHelloWorld.Models{
                     _name = value;
                     OnPropertyChanged();
                 }
+            }
+        }
+
+        public string OS {
+            get => _os;
+            set {
+                _os = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+                OnPropertyChanged();
             }
         }
 

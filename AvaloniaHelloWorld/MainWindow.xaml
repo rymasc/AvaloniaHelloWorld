@@ -6,6 +6,7 @@
         x:Class="AvaloniaHelloWorld.MainWindow"
         Title="AvaloniaHelloWorld">
   <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+    <TextBlock Text="{Binding OS}"/>
     <TextBlock Text="{Binding Greeting}"/>
     <TextBox Text="{Binding Name}" />
     <Button Content="Say Hi!" Click="OnButtonClicked" />
